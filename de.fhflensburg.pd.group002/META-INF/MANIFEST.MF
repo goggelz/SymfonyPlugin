@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Group002
+Bundle-SymbolicName: de.fhflensburg.pd.group002;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.fhflensburg.pd.group002.Activator
+Bundle-Vendor: Tobias Poswistak
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

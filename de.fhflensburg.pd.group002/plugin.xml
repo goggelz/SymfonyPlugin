@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="de.fhflensburg.pd.group002.commands.Symfony"
+            id="de.fhflensburg.pd.group002.commands.appConsole"
+            name="app/Console">
+      </command>
+      <category
+            id="de.fhflensburg.pd.group002.commands.Symfony"
+            name="Symfony">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.fhflensburg.pd.group002.input.Modal"
+            commandId="de.fhflensburg.pd.group002.commands.appConsole">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="de.fhflensburg.pd.group002.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Symfonia"
+               mnemonic="S"
+               id="de.fhflensburg.pd.group002.menus.Symfonia">
+            <command
+                  commandId="de.fhflensburg.pd.group002.commands.appConsole"
+                  mnemonic="S"
+                  id="de.fhflensburg.pd.group002.menus.appConsole">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="de.fhflensburg.pd.group002.toolbars.sampleToolbar">
+            <command
+                  commandId="de.fhflensburg.pd.group002.commands.sampleCommand"
+                  icon="icons/sample.gif"
+                  tooltip="Say hello world"
+                  id="de.fhflensburg.pd.group002.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   
+   <extension
+   		point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            category="de.fhflensburg.pd.group002.Console.category"
+            class="de.fhflensburg.pd.group002.console.View"
+            id="de.fhflensburg.pd.group002.console.View"
+            name="Console View"
+            restorable="true">
+      </view>
+      <category
+            id="de.fhflensburg.pd.group002.Console.category"
+            name="Console Category">
+      </category>
+	</extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="de.fhflensburg.pd.group002.wizard.ProjectCategory"
+            name="New Project Wizard"
+            parentCategory="de.fhflensburg.pd.group002.wizard.ProjectCategory">
+      </category>
+      <wizard
+            category="de.fhflensburg.pd.group002.wizard.ProjectCategory"
+            class="de.fhflensburg.pd.group002.wizard.ProjectWizard"
+            id="de.fhflensburg.pd.group002.wizard.Wizard"
+            name="New Project">
+      </wizard>
+   </extension>
+
+</plugin>
