@@ -15,19 +15,16 @@ public class Modal extends AbstractHandler{
 	    // Create a label to display what the user typed in
 		InputDialog dlg = new InputDialog(Display.getCurrent().getActiveShell(), 
 				"app/Console", 
-				"your command", 
+				"your command (hint: use 'list' to list all available commands)", 
 				"", 
 				new Validator());
 		if(dlg.open() == Window.OK){
 			AppConsole cnl = new AppConsole(dlg.getValue());
-			AppConsoleKiller kill = new AppConsoleKiller(cnl);
 			Thread t1 = new Thread(cnl);
-			Thread t2 = new Thread(kill);
 			
 			Display.getCurrent().asyncExec(new Runnable(){
 				public void run(){
 					t1.start();
-				//	t2.start();
 				}
 			});
 

@@ -67,7 +67,6 @@ public class Validator implements IInputValidator {
 					suggestions = suggestions + " | " + item;
 			}			
 		}
-		
 			
 		for(String item:list){
 			if(item.equals(command[0]))

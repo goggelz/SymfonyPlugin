@@ -35,7 +35,7 @@
       <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
-               label="Symfonia"
+               label="Symfony"
                mnemonic="S"
                id="de.fhflensburg.pd.group002.menus.Symfonia">
             <command
@@ -78,14 +78,13 @@
          point="org.eclipse.ui.newWizards">
       <category
             id="de.fhflensburg.pd.group002.wizard.ProjectCategory"
-            name="New Project Wizard"
-            parentCategory="de.fhflensburg.pd.group002.wizard.ProjectCategory">
+            name="Symfony Wizard">
       </category>
       <wizard
             category="de.fhflensburg.pd.group002.wizard.ProjectCategory"
             class="de.fhflensburg.pd.group002.wizard.ProjectWizard"
             id="de.fhflensburg.pd.group002.wizard.Wizard"
-            name="New Project">
+            name="Symfony Project">
       </wizard>
    </extension>
 
